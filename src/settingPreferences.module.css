@@ -1,0 +1,166 @@
+.flex{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.cards{
+    border: 1px solid #ffdd59;
+    width: 15vw;
+    height: 30vh;
+    margin-top: 1.5vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    /* background: url("https://i.pinimg.com/originals/ab/f8/ba/abf8ba796987032e7cb922eed1b74ceb.jpg") no-repeat center;
+    background-size: cover; */
+    perspective: 1000px; 
+}
+.cards>h1{
+    display: none;
+}
+
+.cards>p{
+    display: none;
+}
+.cl{
+    background: url("https://i.pinimg.com/originals/ab/f8/ba/abf8ba796987032e7cb922eed1b74ceb.jpg") no-repeat center;
+    background-size: cover;
+}
+.epl{
+    background: url("https://cdn.theculturetrip.com/wp-content/uploads/2016/08/premier_league_rebrands_designstudio_01.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.laliga{
+    background: url("https://www.logofootball.net/wp-content/uploads/La-Liga-Logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.bdsliga{
+    background: url("https://www.logofootball.net/wp-content/uploads/bundesliga-logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.sera{
+    background: url("https://www.logofootball.net/wp-content/uploads/Serie-A-Logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.prliga{
+    background: url("http://worldsoccertalk.com/wp-content/uploads/2017/03/liga-nos-logo.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.eredvs{
+    background: url("https://www.logofootball.net/wp-content/uploads/netherlands-eredivisie-logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.l1{
+    background: url("https://www.logofootball.net/wp-content/uploads/Ligue-1-Logo.png") no-repeat center;
+    background-size: cover;
+}
+.serabr{
+    background: url("https://image-service.onefootball.com/crop/face?h=320&image=https%3A%2F%2Fbit.ly%2F32vCWzm&q=75&w=480&fit=crop") no-repeat center;
+    background-size: cover;
+}
+
+.chmpsp{
+    background: url("https://www.logofootball.net/wp-content/uploads/english-championship-logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.h1{
+    color: #ffdd59;
+    text-align: center;
+    margin-bottom: 0;
+}
+.btn{
+    min-width: 15vw;
+    height: 8vh;
+    text-align: center;
+    margin-left: 42.5%;
+    background-color: #227093;
+    color: white;
+  
+    border: none;
+    border-radius: 2%;
+}
+
+.btn:hover {
+    color : #4bcffa;
+    border: 1px solid #4bcffa;
+    transition: .2s;
+}
+
+
+  
+  /* This container is needed to position the front and back side */
+  .flipcardinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .cards:hover .flipcardinner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .cl,.epl,.bdsliga , .sera,.eredvs , .serabr , .l1 , .chmpsp , .laliga ,.prliga,.clback,.eplback,.bdsligaback , .seraback,.eredvsback , .serabrback , .l1back , .chmpspback , .laligaback ,.prligaback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .cl,.epl,.bdsliga , .sera,.eredvs , .serabr , .l1 , .chmpsp , .laliga ,.prliga {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .clback,.eplback,.bdsligaback , .seraback,.eredvsback , .serabrback , .l1back , .chmpspback , .laligaback ,.prligaback {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .laligaback , .bdsligaback{
+      background-color: black;
+  }
+  .l1back ,.serabrback{
+      background-color: #f1c40f  ;
+  }
+  .prligaback,.chmpspback{
+      background-color: white;
+      color: black;
+  }
+  .clback ,.eredvsback,.serabrback{
+      background-color: #4834d4;
+  }
+  .eplback{
+      background-color: #eb4d4b;
+  }
+
+  .seraback{
+      background-color: #3742fa;
+  }
+ 
+
+  @media screen and (max-width : 768px) {
+      .flex{
+        display: grid;
+        grid-template-columns: auto auto ;
+      }
+      .cards{
+          width: 40vw;
+          height: 40vh;
+      }
+      
+  }

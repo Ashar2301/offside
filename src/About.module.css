@@ -1,0 +1,41 @@
+.main{
+    display: flex;
+}
+.aside{
+    width: 50%;
+
+}
+.section{
+    width: 25%; color: #ffdd59;
+    margin-top: 10%;
+    margin-left: 10%;
+    text-align: center;
+}
+.profile{
+    width: 13vw;
+    height: 19.5vh;
+    border-radius: 50%;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    height: 7vh;
+    width: 7vh;
+    color: #ffdd59;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    
+
+   
+    /* padding-left: 5vw; */
+    /* float: right;
+} */
+}
+
+.logo:hover{
+    
+    border-radius: 50%;
+    transform: scale(1.1);
+}

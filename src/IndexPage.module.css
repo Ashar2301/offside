@@ -1,0 +1,72 @@
+.main
+{
+    margin-top: 0;
+    padding-top: 0;
+    width: 100%;
+    height: 100vh;
+    /* background: url("./projpic2.jpg");
+   
+    background-size: cover; */
+    /* font-family: 'Big Shoulders Display', cursive; */
+    display: flex;
+    color: #ffdd59;
+}
+.section
+{
+    width: 50%;
+    text-align: center;
+    padding-top: 17%;
+    font-size: 25px;
+    
+}
+.section>p{
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aside{
+    width: 50%;
+    text-align: center;
+    padding-top: 17%;
+}
+.logo{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5vh;
+}
+.logo > h1{
+    padding: 2vh;
+    margin-left: 2vh;
+}
+
+#ball{
+    animation: ball 10s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes ball {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+@media screen and (max-width : 768px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .section , .aside{
+        width: 100%;
+    }
+}
+

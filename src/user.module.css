@@ -1,0 +1,125 @@
+.profile{
+    width: 20vw;
+    height: 15vh;
+}
+.navbarBtns{
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
+   border: none;
+   cursor: pointer;
+    width: 20vw;
+    height: 15vh;
+    background: none;
+    margin-bottom: 7vh;
+}
+.championsLeague{
+    background: url("https://i.pinimg.com/originals/ab/f8/ba/abf8ba796987032e7cb922eed1b74ceb.jpg") no-repeat center;
+    background-size: cover;
+}
+.premierLeague{
+    background: url("https://cdn.theculturetrip.com/wp-content/uploads/2016/08/premier_league_rebrands_designstudio_01.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.laliga{
+    background: url("https://www.logofootball.net/wp-content/uploads/La-Liga-Logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.bundesliga{
+    background: url("https://www.logofootball.net/wp-content/uploads/bundesliga-logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.serieA{
+    background: url("https://www.logofootball.net/wp-content/uploads/Serie-A-Logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.liganos{
+    background: url("http://worldsoccertalk.com/wp-content/uploads/2017/03/liga-nos-logo.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.eredevisie{
+    background: url("https://www.logofootball.net/wp-content/uploads/netherlands-eredivisie-logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.ligue1{
+    background: url("https://www.logofootball.net/wp-content/uploads/Ligue-1-Logo.png") no-repeat center;
+    background-size: cover;
+}
+.serieABr{
+    background: url("https://image-service.onefootball.com/crop/face?h=320&image=https%3A%2F%2Fbit.ly%2F32vCWzm&q=75&w=480&fit=crop") no-repeat center;
+    background-size: cover;
+}
+
+.championship{
+    background: url("https://www.logofootball.net/wp-content/uploads/english-championship-logo.png") no-repeat center;
+    background-size: cover;
+}
+
+.main{
+    display: flex;
+}
+.section{
+    width: 50%;
+}
+.aside{
+    width: 50%;
+    color: #ffdd59;
+    padding-left: 10%;
+}
+.profDiv{
+   text-align: center;
+   margin-top: 20%;
+   margin-bottom: 50%;
+   color: #ffdd59;
+}
+.aside >h1{
+    margin-top: 10%;
+}
+.profBtns{
+    height: 5vh;
+    width: 40%;
+    margin-left: auto;
+    margin-bottom: 2vh;
+    margin-right: auto;
+    color: white;
+    background: none;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: #227093;
+    border: none;
+}
+.profBtns:hover{
+    color : #4bcffa;
+    border: 1px solid #4bcffa;
+    transition: .2s;
+}
+@media screen and (max-width : 768px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .section ,.aside{
+        width: 100%;
+        margin-bottom: 1vh;
+        
+        overflow: hidden;
+        padding: 0;
+    }
+    .aside{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profDiv{
+        margin-bottom: 2vh;
+    }
+    
+}

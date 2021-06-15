@@ -1,0 +1,76 @@
+.flex{
+    display: flex;
+    margin-top: 0;
+    justify-content: space-between;
+  
+  /* background-color: #ffffff;
+    opacity: .2; */
+    color: #ffdd59;
+}
+.heading{
+    margin-left: 3vw;
+}
+.user{
+    margin-right: 3vw;
+    width: 10vw;
+    height: 7vh;
+    margin-top: 1vw;
+    background: none;
+    color: #ffdd59;
+    border: none;
+    border-radius: 2%;
+    font-size: 14px;
+    /* border: 1px solid white; */
+}
+.user:hover{
+    border-bottom: 1px solid  #ffdd59 ;
+}
+
+.userLogo{
+    position: relative;
+    top: 10px;
+   
+}
+.mobile{
+    display: none;
+    position: relative;
+    height: 10vh;
+}
+.Mheading{
+    position: absolute;
+    left: 25%;color: #ffdd59;
+}
+.Mdiv{
+     position: absolute;
+    left: 65%;
+    display: flex;
+    
+}
+.muser,.mabout,.home{
+    margin-right: 5vw;
+    width: 10vw;
+    height: 7vh;
+    margin-top: 1vw;
+    background: none;
+    color: #ffdd59;
+    border: none;
+    border-radius: 2%;
+    font-size: 14px;
+}
+.mabout,.home{
+    margin-top: 5vw;
+}
+.home{
+    margin-left: 0;
+}
+@media screen and (max-width:768px) {
+    
+    .flex{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+    
+    
+}
