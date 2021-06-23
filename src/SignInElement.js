@@ -75,11 +75,11 @@ const SignInElement=()=>{
     const onNameChange=(event)=>{
         if(event.target.value.length > 0)
         {
-            setName(true)
+            setName(false)
             document.getElementById('nameAlert').style.display = "none"
         }
         else{
-            setName(false);
+            setName(true);
             document.getElementById('nameAlert').style.display = "flex"
         }
     }
