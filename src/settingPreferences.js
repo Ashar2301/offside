@@ -2,13 +2,14 @@ import axios from 'axios';
 import classes from './settingPreferences.module.css'
 import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
-import {useState} from 'react'
+import {useHistory} from 'react-router-dom'
 
 const SettingPreferences=()=>{
     let arr=[false,false,false,false,false,false,false,false,false,false,];
     let name=[];
     let openStarID;
     let closedStarID;
+    const history = useHistory();
     // const [state , changeState] = useState(false)
     const changeOpnBtnStateCl=()=>{
         // changeState(prevState=>!prevState)
@@ -25,9 +26,9 @@ const SettingPreferences=()=>{
         openstar.style.display = "inline";
         closestar.style.display = "none";
     }
-   const onProceedClick=()=>{
+   const onProceedClick=async()=>{
       
-       
+       let flag = false;
 
        axios.get('http://localhost:5000/home',{
            params:{
@@ -53,14 +54,21 @@ const SettingPreferences=()=>{
            setPreference : true,
            Preferences : resStr
        }
-       axios.post('http://localhost:5000/home' , newObj)
+      axios.post('http://localhost:5000/home' , newObj)
        .then(response=>{
            console.log(response);
-           window.location.replace("http://localhost:3000/content");
+           //window.location.replace("http://localhost:3000/content");
+           history.push('/content');
+           window.location.reload();
+                flag = true;
        })
        .catch(err => console.log(err))
        })
        .catch(err => console.log(err))
+
+     
+      
+        
 
     }
     return(

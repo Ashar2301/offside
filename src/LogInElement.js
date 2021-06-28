@@ -3,6 +3,7 @@ import Classes from './LogInElement.module.css'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import exclamationmark from './exclamation-mark.png'
+import {withRouter} from 'react-router-dom'
  class LogInElement extends Component{
 
   auth2Obj;
@@ -43,7 +44,10 @@ import exclamationmark from './exclamation-mark.png'
                axios.post('http://localhost:5000/google',obj)
                .then(respo => {
                 console.log(respo);
-                window.location.replace("http://localhost:3000/home");
+                //window.location.replace("http://localhost:3000/home");
+                const { history } = this.props;
+                if(history) history.push('/home');
+                window.location.reload();
                })
                .catch(err =>console.log(err))
                
@@ -84,7 +88,10 @@ import exclamationmark from './exclamation-mark.png'
                 localStorage.setItem("currentUser" , response.data[0].name);
                 localStorage.setItem("currentUserEmail" , response.data[0].email);
                 console.log(response.data[0]);
-                window.location.replace("http://localhost:3000/home");
+               // window.location.replace("http://localhost:3000/home");
+                const { history } = this.props;
+                if(history) history.push('/home');
+                window.location.reload();
                 
             }
             else{
@@ -147,4 +154,4 @@ import exclamationmark from './exclamation-mark.png'
     }
 }
 
-export default  LogInElement;
+export default  withRouter(LogInElement);

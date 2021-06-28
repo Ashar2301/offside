@@ -24,18 +24,21 @@ class Auth{
             client_id: '931051935319-3hp7ld6806ars1lmrk9adrji87ramadf.apps.googleusercontent.com'
           })
           console.log('Api inited')
-          
+          console.log(this.auth2Obj)
+          this.auth2Obj.signOut().then(()=>{
+            console.log("YES")
+        })
         })
       }
-      logout() {
+     async logout() {
         this.authenticated = false;
         localStorage.setItem('currentUser',"")
         localStorage.setItem('currentUserEmail',"")
-        window.location.replace('http://localhost:3000')
-        this.insertGapiScript();
-        this.auth2Obj.signOut().then(()=>{
-            console.log("YES")
-        })
+        
+      await  this.insertGapiScript();
+     
+        
+        // window.location.replace('http://localhost:3000')
       }
     
       isAuthenticated() {

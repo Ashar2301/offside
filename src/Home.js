@@ -2,7 +2,7 @@
 import {Component} from 'react';
 import axios from 'axios'
 import SettingPreferences from './settingPreferences'
-import Content from './content'
+import {withRouter} from 'react-router-dom'
 
 class Home extends Component{
 
@@ -40,7 +40,9 @@ class Home extends Component{
             )
         }
         else{
-            window.location.replace('http://localhost:3000/content')
+            const { history } = this.props;
+                if(history) history.push('/content');
+                window.location.reload();
         }
     }
     render(){
@@ -52,4 +54,4 @@ class Home extends Component{
     }
 }
 
-export default Home;
+export default withRouter(Home);

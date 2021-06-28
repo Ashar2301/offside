@@ -3,12 +3,13 @@ import axios from 'axios'
 import classes from './user.module.css'
 import profilePic from './prof.jpg'
 import Auth from './Auth'
-import LogInElement  from './LogInElement';
+import { useHistory } from 'react-router';
 
 const User=()=>{
 
     const [pref , setPref] = useState(null);
     const [obj,setObj] = useState(null);
+    const history = useHistory();
     useEffect(()=>{
         axios.get('http://localhost:5000/getUser',{
             params:{
@@ -54,7 +55,7 @@ const User=()=>{
 
     const onLogOutClick=()=>{
          Auth.logout();
-
+        history.push('/')
     }
 
     const profile=()=>{
