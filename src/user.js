@@ -11,7 +11,7 @@ const User=()=>{
     const [obj,setObj] = useState(null);
     const history = useHistory();
     useEffect(()=>{
-        axios.get('http://localhost:5000/getUser',{
+        axios.get('https://offside-api.herokuapp.com/getUser',{
             params:{
                 email : localStorage.getItem("currentUserEmail")
             }
@@ -45,10 +45,11 @@ const User=()=>{
             setPreference : 'false'
         }
 
-        axios.post('http://localhost:5000/getUser/updatePref',newObj)
+        axios.post('https://offside-api.herokuapp.com/getUser/updatePref',newObj)
         .then(response=>{
             console.log(response)
-            window.location.replace("http://localhost:3000/home");
+            // window.location.replace("http://localhost:3000/home");
+            history.push('/home')
         })
         .catch(err=>console.log(err))
     }

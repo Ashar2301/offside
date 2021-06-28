@@ -12,7 +12,7 @@ class Home extends Component{
 
     componentDidMount(){
         const email = localStorage.getItem("currentUserEmail");
-        axios.get('http://localhost:5000/home',{
+        axios.get('https://offside-api.herokuapp.com/home',{
             params:{
                 email : email
             }

@@ -30,7 +30,7 @@ const SettingPreferences=()=>{
       
        let flag = false;
 
-       axios.get('http://localhost:5000/home',{
+       axios.get('https://offside-api.herokuapp.com/home',{
            params:{
                email : localStorage.getItem("currentUserEmail")
            }
@@ -54,7 +54,7 @@ const SettingPreferences=()=>{
            setPreference : true,
            Preferences : resStr
        }
-      axios.post('http://localhost:5000/home' , newObj)
+      axios.post('https://offside-api.herokuapp.com/home' , newObj)
        .then(response=>{
            console.log(response);
            //window.location.replace("http://localhost:3000/content");

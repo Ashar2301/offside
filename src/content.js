@@ -16,7 +16,7 @@ class content extends Component{
 
     componentDidMount=()=>{
         
-        axios.get('http://localhost:5000/home',{
+        axios.get('https://offside-api.herokuapp.com/home',{
             params:{
                 email : localStorage.getItem('currentUserEmail')
             }

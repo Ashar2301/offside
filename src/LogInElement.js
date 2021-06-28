@@ -41,7 +41,7 @@ import {withRouter} from 'react-router-dom'
                 email : basic.getEmail(),
                 password : 'nopswd'
             }
-               axios.post('http://localhost:5000/google',obj)
+               axios.post('https://offside-api.herokuapp.com/google',obj)
                .then(respo => {
                 console.log(respo);
                 //window.location.replace("http://localhost:3000/home");
@@ -77,7 +77,7 @@ import {withRouter} from 'react-router-dom'
         //console.log(obj1.value)
         
         console.log(this.auth2Obj.isSignedIn.get())
-        axios.get('http://localhost:5000/' , {
+        axios.get('https://offside-api.herokuapp.com/' , {
             params:{
                 email : obj1.value ,
                 password : obj2.value
